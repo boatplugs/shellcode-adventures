@@ -1,0 +1,21 @@
+[
+  { "op": "Regular expression",
+    "args": ["User defined", ".+?:\\s(([0-9a-f]{2} )+).+", true, true, false, false, false, false, "Highlight matches"],
+    "disabled": true },
+  { "op": "Find / Replace",
+    "args": [{ "option": "Regex", "string": ".+?:\\s(([0-9a-f]{2} )+).+" }, "$1", true, false, true, false] },
+  { "op": "Find / Replace",
+    "args": [{ "option": "Regex", "string": "\\n" }, "", true, false, true, false] },
+  { "op": "Find / Replace",
+    "args": [{ "option": "Regex", "string": " $" }, "", true, false, true, false] },
+  { "op": "From Hex",
+    "args": ["Auto"] },
+  { "op": "To Hex",
+    "args": ["\\x", 0] },
+  { "op": "Find / Replace",
+    "args": [{ "option": "Regex", "string": "\\\\x50" }, "\\n\\\\x50", true, false, true, false],
+    "disabled": true },
+  { "op": "Find / Replace",
+    "args": [{ "option": "Regex", "string": "^|$" }, "\"", true, false, true, false],
+    "disabled": true }
+]

